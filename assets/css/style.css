@@ -1,0 +1,554 @@
+/*---GLOBALES---*/
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /*Porcentaje para trabajar con la medida rem 1rem = 10px*/
+}
+
+body {
+  font-family: "Bitter", serif; /*Es la fuente que elegimos de Google Fonts*/
+  font-size: 1.6rem; /*Definimos el tamaño de 16 px*/
+}
+
+img {
+  max-width: 100%;
+}
+
+/*--Sistema de Tamaños--*/
+/*Para que sea mas proporcionado la WEB*/
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 3.8rem;
+}
+
+h3 {
+  font-size: 3.4rem;
+}
+
+h4 {
+  font-size: 3rem;
+}
+/*----------------------------------------*/
+
+/*-----UTILIDADES-----*/
+.contenedor {
+  max-width: 120rem; /*Le damos un ancho al máximo contenedor*/
+  width: 95%; /*Le decimos que solo ocupe un 95% del espacio disponible*/
+  margin: 0 auto; /*Centramos el contenido*/
+  padding: 1rem; /*Damos un padding*/
+}
+
+.contenedor a {
+  text-align: center; /*Centramos el texto*/
+}
+
+
+.no__margin {
+  margin: 0rem;
+}
+
+.margin__auto{
+  margin: auto;
+}
+
+.no__padding {
+  padding: 0;
+}
+
+.padding__1 {
+  padding: 1rem;
+}
+
+.fw__700 {
+  font-weight: 700;
+}
+
+.centrar__texto {
+  text-align: center;
+}
+
+.left__texto {
+  text-align: left;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-jc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-center {
+  display: flex;
+  align-items: flex-start;
+}
+
+.columnas-6-1 {
+  flex: 0 0 calc(50% - 1rem);
+}
+
+
+.columnas-6 {
+  flex: 0 0 50%;
+}
+
+.columnas-3 {
+  flex: 0 0 16.6%;
+  background-color: #b33d24;
+}
+
+.columnas-9 {
+  flex: 0 0 83.4%;
+}
+
+/*---HEADER---*/
+
+.style__site {
+  background-color: #ff5733; /*Le damos un color de fondo*/
+}
+
+.contenedor h1 {
+  font-weight: 400;
+  margin: 3rem 0 0 0;
+}
+
+.contenedor h1 span {
+  font-weight: 700;
+}
+
+.barra a,
+.links__secundarios a {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/*Dispositivos Móviles de 768PX*/
+@media (min-width: 768px) {
+  .barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/*Dispositivos Móviles de 768PX*/
+@media (min-width: 768px) {
+  .items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.items input[type="search"] {
+  padding: 0.8rem;
+  border-radius: 2.5rem;
+  border: none;
+}
+
+.items .buscador,
+.items a {
+  margin-bottom: 0.5rem;
+}
+
+.items a:hover,
+.links__secundarios a:hover {
+  color: rgb(255, 244, 33);
+}
+
+/*Dispositivos Móviles de 768PX*/
+@media (min-width: 768px) {
+  .items .buscador,
+  .items a {
+    margin-right: 2rem;
+    margin-bottom: 0rem;
+  }
+
+  .items a:last-of-type {
+    margin-right: 0rem;
+  }
+}
+
+/*Dispositivos Móviles de 768PX*/
+@media (min-width: 768px) {
+  .links__secundarios {
+    display: flex;
+    justify-content: flex-end;
+    margin: -1rem 0 2rem 0;
+  }
+}
+
+.links__secundarios a {
+  margin-bottom: 0.5rem;
+}
+
+.links__secundarios a:last-of-type {
+  margin-bottom: 0rem;
+}
+
+/*Dispositivos Móviles de 768PX*/
+@media (min-width: 768px) {
+  .links__secundarios a {
+    margin-right: 2rem;
+    margin-bottom: 0rem;
+  }
+
+  .links__secundarios a:last-of-type {
+    margin-right: 0rem;
+  }
+}
+
+/*---FORMULARIOS---*/
+.form-container {
+  width: 1019px;
+  height: 515px;
+  margin: 7rem auto;
+  /* margin-top: 100px; */
+}
+
+.form {
+  position: relative;
+  background: #fff;
+  width: 50%;
+  height: 100%;
+  border: 1px solid #ccc;
+  border-right: none;
+  float: left;
+}
+
+.title {
+  width: 60%;
+  margin-top: 11%;
+  margin-left: 13%;
+}
+
+input[type="text"]:first-of-type,
+input[type="email"],
+input[type="password"] {
+  width: 67%;
+  margin-top: 9%;
+  margin-left: 13%;
+  padding: 11px;
+  font-size: 14px;
+  border: none;
+  border-bottom: 2px solid #4a4848;
+}
+
+.form input[type="text"]:first-of-type {
+  margin-top: 0;
+}
+
+input[type="submit"] {
+  background: linear-gradient(
+    to right,
+    rgb(255, 244, 33),
+    rgba(207, 179, 78, 95)
+  );
+  width: 146px;
+  height: 43px;
+  margin-top: 9%;
+  margin-left: 34%;
+  border-radius: 23px;
+  color: rgba(52, 58, 64, 100);
+  border: none;
+  margin-bottom: 21px;
+  transition: all 800ms;
+}
+
+input[type="submit"]:hover {
+  background: rgb(177, 189, 71);
+  cursor: pointer;
+}
+
+form a {
+  margin-left: 21%;
+  padding: 5px;
+}
+
+.derecha {
+  width: 508px;
+  height: 100%;
+  object-fit: cover;
+  float: right;
+}
+
+.alert_green {
+  position: absolute;
+  background: #bce9bc;
+  padding: 8px;
+  width: 97%;
+  text-align: center;
+}
+
+.alert_red {
+  position: absolute;
+  background: #f15c5c;
+  padding: 8px;
+  width: 97%;
+  text-align: center;
+}
+
+/* Tabla estilos */
+.tabla__contenedor, .contenido .tabla__contenedor {
+  width: 90%;
+  background-color: #fff;
+  border-radius: 1.5rem;
+  border-collapse: collapse;
+  margin: 4rem auto;
+  text-align: center;
+}
+
+
+
+.table__header{
+  background-color: #d19729;
+  
+}
+
+.table__header a{
+  text-align: center;
+}
+
+.table__header td {
+  padding: 2rem;
+}
+
+.tabla__contenedor td {
+  padding: 2rem;
+}
+
+/*Santi*/
+.container-tabla {
+  width: 100%;
+}
+
+.tabla {
+  background: #474892;
+  width: 70%;
+  margin: auto;
+  margin-top: 100px;
+  text-align: center;
+  border-collapse: collapse;
+  border-top-left-radius: 10px 10px;
+  border-top-right-radius: 10px 10px;
+}
+
+.tabla-th {
+  padding: 10px;
+  color: #e8e8e8;
+  border-bottom: 3px solid #52572b;
+}
+
+.tabla-td {
+  background: #fff;
+  padding: 13px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Botones de la tabla */
+.btn {
+  display: block;
+  padding: 5px;
+  width: 50%;
+  border-radius: 14px;
+  border: none;
+  text-decoration: none;
+}
+
+.btn__enviar {
+  background: #ffaa00;
+  color: #fff;
+}
+
+
+.btn__modificar{
+  background: #1147db;
+  color: #fff;
+}
+
+.btn-red {
+  background: #f15c5c;
+  color: #fff;
+}
+
+.btn-yellow {
+  background: #10b196;
+  color: #fff;
+}
+
+.btn:hover {
+  transition: all 500ms;
+  background: #ddde;
+}
+
+/*-----MENU-----*/
+/*Contenido Principal*/
+.libro {
+  background-color: #e1e1e1;
+  border: 1px solid #4e4848;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/*Dispositivos Móviles de 768PX*/
+@media (min-width: 768px) {
+  .contenido__principal {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3rem;
+    row-gap: 3rem;
+  }
+
+  .libro {
+    background-color: #e1e1e1;
+    border: 1px solid #4e4848;
+    
+  }
+}
+
+/*-----LIBROS------*/
+
+.bar__lateral {
+  background-color: #b33d24;
+  padding: 1rem 1rem 1rem 3rem;
+}
+
+.bar__lateral h4 {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.bar__lateral a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.8rem;
+}
+
+.con__lateral {
+  padding-left: 3rem;
+}
+
+.contenido {
+  background-color: #dadada;
+  min-height: 70rem;
+}
+
+.bar__libros {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem;
+}
+
+.bar__libros button {
+  flex: 0 0 12rem;
+  margin-left: 4rem;
+}
+
+.bar__libros input {
+  margin-right: 40rem;
+  width: 40rem;
+  padding: .5rem;
+  border-radius: .5rem;
+  border: none;
+}
+
+/*-----FORMULARIO-----*/
+.formulario {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  column-gap: 3rem;
+  row-gap: 5rem
+  ;
+}
+
+.formulario input[type="text"] {
+  margin: 0;
+}
+
+/*------FOOTER-----*/
+.style__footer {
+  background-color: #ff8a75;
+}
+
+.style__footer h2 {
+  font-weight: 400;
+}
+
+.style__footer h2 span {
+  font-weight: 700;
+}
+
+.barra__footer a,
+.barra__footer p {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.barra__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.enlaces a {
+  display: block;
+}
+
+.bloques__enlaces {
+  display: flex;
+}
+
+.bloques {
+  margin-right: 2rem;
+}
+
+.copy {
+  color: white;
+  font-size: 2rem;
+  background-color: #f57f64;
+  padding: 1rem;
+}
+
+/* yo tito puse esto --- poner especifico*/
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
+/*Formulario Categorias*/
+
+form .elemento input[type="text"]{ 
+  margin: 0rem;
+}
+  /* width: ; */
+
+
+form .btn__categoria input[type='submit']{
+  margin: 0;
+  background: #057514;
+  color: #fff;
+}
+
+form .elemento input[type="text"] {
+  margin-right: 2rem;
+}
+
+.contenedor .formulario input[type = 'submit']{
+  margin: 0;
+  background: #057514;
+  color: #fff;
+}
