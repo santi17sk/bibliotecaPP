@@ -31,13 +31,13 @@ if (isset($_SESSION['User']) && $_SESSION['User']['Rol'] == 'admin') {
 
                 <h2>AGREGAR CATEGORIA</h2>
                 <div class="flex-center">
-                    <div class="elemento">
+                    <div class="elemento" style="margin: 0;">
                         <label for="nombre__cat" class="fw__700">Nombre: </label>
-                        <input type="text" name="nombre__cat" placeholder="Añade una categoria" class="no__margin" id="nombreCategoria">
+                        <input type="text" name="nombre__cat" placeholder="Añade una categoria" class="no__margin" id="nombreCategoria"  style="margin: 0;">
                     </div>
-                    <div class="btn__categoria">
-                        <button class="btn btn-red" id="agregarCategoria">Agregar</button>
-                    </div>
+          
+                        <button class="btn" id="agregarCategoria" style="width: 10rem; background: green">Agregar</button>
+                    
                 </div>
                 <table class="tabla__contenedor">
                     <thead>

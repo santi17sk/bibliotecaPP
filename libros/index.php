@@ -36,11 +36,14 @@ if (isset($_SESSION['User']) && $_SESSION['User']['Rol'] == 'admin') {
                     <?php while($libro = $libros->fetch_assoc()): ?>
                     <div class="libro">
                         <div class="imagen">
-                            <img src="/biblioteca/libros/img/<?=$libro['nombre']?>" alt="Imagen de LIbro">
+                            <img src="/biblioteca/libros/img/<?=$libro['nombre']?>" alt="Imagen de LIbro" style="height: 30rem;">
                         </div>
                         <div class="titulo">
-                            <h3><?=$libro['titulo']?></h3>
+                            <a href=<?="update.php?idLibro=$libro[id_libro]"?> style="color: #000;"><h3><?=$libro['titulo']?></h3></a>
                         </div>
+                        <div class="descripcion">
+                        <p><?=$libro['descripcion']?></p>
+                </div>
                     </div>
                     <?php endwhile; ?>
                 <?php endif; ?>

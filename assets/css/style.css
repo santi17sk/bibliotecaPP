@@ -560,3 +560,8 @@ form .elemento input[type="text"] {
   background: #057514;
   color: #fff;
 }
+
+.editarLibro {
+  max-width: 30rem;
+  margin: 0 auto;
+}
