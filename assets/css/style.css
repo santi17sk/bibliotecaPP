@@ -47,6 +47,14 @@ h4 {
   padding: 1rem; /*Damos un padding*/
 }
 
+.contenedor.inicio{
+  max-width: 120rem; /*Le damos un ancho al máximo contenedor*/
+  width: 95%; /*Le decimos que solo ocupe un 95% del espacio disponible*/
+  margin: 0 auto; /*Centramos el contenido*/
+  padding: 1rem; /*Damos un padding*/
+  min-height: 100vh;
+}
+
 .contenedor a {
   text-align: center; /*Centramos el texto*/
 }

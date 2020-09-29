@@ -1,4 +1,5 @@
 libros/img/*.jpg
 libros/img/*.jpeg
 libros/img/*.png
+libros/img/*.webp
 pruebas.php

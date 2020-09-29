@@ -29,7 +29,7 @@ require_once 'funciones.php';
                 </div>
                 <div class="items">
                     <form action="" class="buscador">
-                        <input type="search" placeholder="Buscar">
+                        <input type="search" placeholder="Buscar" id="buscadorLibros">
                     </form>
                     <?php if (isset($_SESSION['User'])) : ?>
                         <a href=""><?= $_SESSION['User']['Nick']; ?></a>
