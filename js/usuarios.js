@@ -5,12 +5,12 @@ $(document).ready(function () {
             type: "POST",
             data: { id: id, accion: accion },
         }).done(function (retorno) {
-            $('#tablaUsuarios').html(retorno);
+            $("#accion" + id).html(retorno);
         });
     }
 
     $('.tabla__contenedor').on('click', '.acciones button', function () {
         var id = $(this).attr('id');
-            UpDelUsuario(id);
+        UpDelUsuario(id);
     })
 });

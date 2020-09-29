@@ -50,7 +50,7 @@ $usuarios = prepare_select($conexion, $sql);
                                     <td><?= $usuario['Nombre'] ?></td>
                                     <td><?= $usuario['Dni'] ?></td>
                                     <td><?= $usuario['Email'] ?></td>
-                                    <td class="acciones" id="acciones">
+                                    <td class="acciones" id="<?="accion$usuario[Id_Usuario]"?>">
                                         <?php if ($usuario['Estado'] == 1) : ?>
                                             <button class="btn btn-red" id="<?= $usuario['Id_Usuario'] ?>">Eliminar</button>
 
