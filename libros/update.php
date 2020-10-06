@@ -48,7 +48,7 @@ if (!empty($_REQUEST['guardar'])) {
                                 <label">Descipcion</label>
                                     <textarea id="desc" name="descripcion"><?= $libro['descripcion'] ?></textarea>
                             </div>
-                            <input type="submit" class="btn btn__enviar" value="Gardar" style="margin: 1rem auto;" name="guardar">
+                            <input type="submit" class="btn btn__enviar" value="Guardar" style="margin: 1rem auto;" name="guardar">
                         </div>
                     </form>
                 </div>

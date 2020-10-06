@@ -33,14 +33,12 @@ require_once 'funciones.php';
                     </form>
                     <?php if (isset($_SESSION['User'])) : ?>
                         <a href=""><?= $_SESSION['User']['Nick']; ?></a>
+                        <a href="/biblioteca/usuario/gestion-perfil.php">Editar Perfil</a>
                         <a href="/biblioteca/acceso/logout.php">Cerrar Sesión</a>
                     <?php else : ?>
                         <a href="/biblioteca/acceso/login.php">Iniciar Sesión</a>
                         <a href="/biblioteca/acceso/registro.php">Registrarse</a>
                     <?php endif; ?>
-
-
-                    <a href="">Editar Perfil</a>
                 </div>
 
             </div>
