@@ -56,7 +56,7 @@ require_once 'funciones.php';
                 <a href="#">Contacto</a>
                 <a href="#">Sobre Nosotros</a>
                 <?php if (isset($_SESSION['User']) && $_SESSION['User']['Rol'] == 'admin') : ?>
-                    <a data-pushbar-target="bar__menu" onclick="stopDefAction(e)">Dashboard</a>
+                    <a data-pushbar-target="bar__menu" onclick="stopDefAction(e)">Menu</a>
                 <?php endif; ?>
             </div>
         </div>
