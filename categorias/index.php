@@ -12,7 +12,7 @@ if (isset($_SESSION['User']) && $_SESSION['User']['Rol'] == 'admin') {
 ?>
 
 
-<div class="flex">
+<!-- <div class="flex">
     <div class="columnas-3 color__barra">
         <div class="bar__lateral">
             <h4>DASHBOARD</h4>
@@ -23,7 +23,8 @@ if (isset($_SESSION['User']) && $_SESSION['User']['Rol'] == 'admin') {
             </div>
         </div>
     </div>
-    <div class="columnas-9">
+    <div class="columnas-9"> -->
+    <?php require_once '../libs/sideBar.php'?>
         <div class="contenido">
 
 
@@ -77,9 +78,9 @@ if (isset($_SESSION['User']) && $_SESSION['User']['Rol'] == 'admin') {
             <script src="http://localhost/biblioteca/js/categorias.js"></script>
 
         </div>
-    </div>
+    <!-- </div>
 
-</div>
+</div> -->
 
 
 <!-- FINAL -->

@@ -10,12 +10,20 @@ require_once 'funciones.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Fuentes de Google Fonts-->
-    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,700;0,900;1,300&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,700;0,900;1,300&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&family=Hind+Madurai:wght@400;700&display=swap" rel="stylesheet">
     <!--Normalized-->
     <link rel="stylesheet" href="/biblioteca/assets/css/normalize.css">
     <!--Estilos-->
+    <link rel="stylesheet" href="http://localhost/biblioteca/assets/css/pushbar.css">
     <link rel="stylesheet" href="/biblioteca/assets/css/style.css">
+   
     <title>Tú Biblioteca</title>
+    <script type="text/javascript">
+        function stopDefAction(e) {
+            e.preventDefault();
+        }
+    </script>
 </head>
 
 <body>
@@ -47,9 +55,9 @@ require_once 'funciones.php';
                 <a href="/biblioteca/index.php">inicio</a>
                 <a href="#">Contacto</a>
                 <a href="#">Sobre Nosotros</a>
-                <?php if(isset($_SESSION['User']) && $_SESSION['User']['Rol'] == 'admin'): ?>
-                    <a href="/biblioteca/libros/">Dashboard</a>
-                <?php endif;?>
+                <?php if (isset($_SESSION['User']) && $_SESSION['User']['Rol'] == 'admin') : ?>
+                    <a data-pushbar-target="bar__menu" onclick="stopDefAction(e)">Dashboard</a>
+                <?php endif; ?>
             </div>
         </div>
     </header>

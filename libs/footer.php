@@ -37,6 +37,18 @@
     </div>
 
 </footer>
+<script src="http://localhost/biblioteca/js/sideBar/pushbar.js"></script>
+<script>
+    const pushbar = new Pushbar({
+        blur: true,
+        overlay: true,
+    });
+
+    //Abrir la barra laterañ
+    pushbar.open('bar__menu');
+    //Cerramos la barra lateral
+    pushbar.close();
+</script>
 </body>
 
 </html>
